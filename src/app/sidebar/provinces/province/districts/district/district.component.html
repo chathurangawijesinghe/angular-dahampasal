@@ -2,8 +2,11 @@
   <a href="#" class="nav-link">
     <i class="far fa-circle nav-icon"></i>
     <p>
-      District Component
+      {{district.name}}
       <i class="right fas fa-angle-left"></i>
     </p>
   </a>
+  <ul class="nav nav-treeview">
+    <app-dahampasal [district]="district"></app-dahampasal>
+  </ul>
 </li>

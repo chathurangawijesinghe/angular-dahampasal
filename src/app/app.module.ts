@@ -17,6 +17,9 @@ import { ProvinceComponent } from './sidebar/provinces/province/province.compone
 import { DistrictsComponent } from './sidebar/provinces/province/districts/districts.component';
 import { DistrictComponent } from './sidebar/provinces/province/districts/district/district.component';
 import { DashboardsComponent } from './sidebar/dashboards/dashboards.component';
+import { DahampasalaComponent } from './sidebar/provinces/province/districts/district/dahampasal/dahampasala/dahampasala.component';
+import { DahampasalComponent } from './sidebar/provinces/province/districts/district/dahampasal/dahampasal.component';
+import { DahampasalaPageComponent } from './pages/dahampasala-page/dahampasala-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { DashboardsComponent } from './sidebar/dashboards/dashboards.component';
     ProvinceComponent,
     DistrictsComponent,
     DistrictComponent,
-    DashboardsComponent
+    DashboardsComponent,
+    DahampasalaComponent,
+    DahampasalComponent,
+    DahampasalaPageComponent
   ],
   imports: [
     BrowserModule,

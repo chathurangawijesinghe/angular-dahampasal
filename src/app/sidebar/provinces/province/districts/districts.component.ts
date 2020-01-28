@@ -29,7 +29,9 @@ export class DistrictsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    this.selectedDistricts = this.districts.filter((district) => {
+      return district.provinceId === this.province.id;
+    });
   }
 
 }
