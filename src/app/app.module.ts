@@ -10,8 +10,8 @@ import { AdministratorDashboardComponent } from './sidebar/dashboards/administra
 import { AppRoutingModule } from './app-routing.module';
 import { DefaultDashboardComponent } from './sidebar/dashboards/default-dashboard/default-dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { HomeComponent } from './header/home/home.component';
-import { ContactComponent } from './header/contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { ProvincesComponent } from './sidebar/provinces/provinces.component';
 import { ProvinceComponent } from './sidebar/provinces/province/province.component';
 import { DistrictsComponent } from './sidebar/provinces/province/districts/districts.component';
@@ -20,6 +20,7 @@ import { DashboardsComponent } from './sidebar/dashboards/dashboards.component';
 import { DahampasalaComponent } from './sidebar/provinces/province/districts/district/dahampasal/dahampasala/dahampasala.component';
 import { DahampasalComponent } from './sidebar/provinces/province/districts/district/dahampasal/dahampasal.component';
 import { DahampasalaPageComponent } from './pages/dahampasala-page/dahampasala-page.component';
+import { HeaderRoutingModule } from './header/header-routing.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { DahampasalaPageComponent } from './pages/dahampasala-page/dahampasala-p
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

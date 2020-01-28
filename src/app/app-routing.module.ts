@@ -6,12 +6,12 @@ import { StudentDashboardComponent } from './sidebar/dashboards/student-dashboar
 import { DefaultDashboardComponent } from './sidebar/dashboards/default-dashboard/default-dashboard.component';
 import { DahampasalaComponent } from './sidebar/provinces/province/districts/district/dahampasal/dahampasala/dahampasala.component';
 import { DahampasalaPageComponent } from './pages/dahampasala-page/dahampasala-page.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/default-dashboard', pathMatch: 'full' },
-  { path: 'administrator-dashboard', component: AdministratorDashboardComponent },
-  { path: 'student-dashboard', component: StudentDashboardComponent },
-  { path: 'default-dashboard', component: DefaultDashboardComponent },
+  { path: 'dashboard/administrator-dashboard', component: AdministratorDashboardComponent },
+  { path: 'dashboard/student-dashboard', component: StudentDashboardComponent },
+  { path: 'dashboard/default-dashboard', component: DefaultDashboardComponent },
   { path: 'dahampasala/:id', component: DahampasalaPageComponent }
 ];
 

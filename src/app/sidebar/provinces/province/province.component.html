@@ -3,7 +3,7 @@
     <i class="far fa-circle nav-icon"></i>
     <p>
       {{province.name}}
-      <i class="right fas fa-angle-left"></i>
+      <i *ngIf="province.hasDistricts" class="right fas fa-angle-left"></i>
     </p>
   </a>
   <ul class="nav nav-treeview">
