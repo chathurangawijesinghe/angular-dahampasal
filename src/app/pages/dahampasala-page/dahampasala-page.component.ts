@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Dahampasala } from 'src/app/sidebar/provinces/province/districts/district/dahampasal/dahampasala.model';
 import { ActivatedRoute } from '@angular/router';
+import { Dahampasala } from './dahampasala.model';
 
 @Component({
   selector: 'app-dahampasala-page',

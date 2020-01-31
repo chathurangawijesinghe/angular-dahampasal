@@ -1,0 +1,19 @@
+<li *ngIf="sidebarItemData.subitems !== null" class="nav-item has-treeview"
+  [ngClass]="{ 'menu-open': sidebarItemData.clicked }">
+  <a href="#" (click)="sidebarItemClicked(sidebarItemData)" class="nav-link" [ngClass]="{ 'active': sidebarItemData.clicked }">
+    <i class="nav-icon {{sidebarItemData.icon}}"></i>
+    <p style="padding-left: 10px;">
+      {{sidebarItemData.name}}
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul *ngFor="let item of sidebarItemData.subitems" class="nav nav-treeview">
+    <app-sidebar-item [sidebarItemData]="item"></app-sidebar-item>
+  </ul>
+</li>
+<li *ngIf="sidebarItemData.subitems === null || sidebarItemData.subitems.length === 0" class="nav-item">
+  <a routerLink="{{sidebarItemData.link}}" (click)="sidebarItemClicked(sidebarItemData)" class="nav-link">
+    <i class="nav-icon {{sidebarItemData.icon}}"></i>
+    <p style="padding-left: 10px;">{{sidebarItemData.name}}</p>
+  </a>
+</li>
