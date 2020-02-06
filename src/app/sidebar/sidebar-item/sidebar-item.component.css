@@ -1,0 +1,33 @@
+ul{
+  padding-left: 20px;
+  display: none;
+}
+
+li{
+  list-style: none;
+}
+
+ul.active{
+  display: block;
+}
+
+li a{
+  display: block;
+  width: 100%;
+}
+
+li p{
+  width: calc(100% - 30px);
+}
+
+li p, li i {
+  float: left;
+}
+
+li i{
+  margin-top: 5px;
+}
+
+li p i{
+  float: right;
+}

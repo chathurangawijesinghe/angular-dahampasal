@@ -1,5 +1,5 @@
-<li *ngIf="sidebarItemData.subitems !== null" class="nav-item has-treeview"
-  [ngClass]="{ 'menu-open': sidebarItemData.clicked }">
+<!-- <li *ngIf="sidebarItemData.subitems !== null" class="nav-item"
+  [ngClass]="{ 'menu-expanded': sidebarItemData.clicked }">
   <a href="#" (click)="sidebarItemClicked(sidebarItemData)" class="nav-link" [ngClass]="{ 'active': sidebarItemData.clicked }">
     <i class="nav-icon {{sidebarItemData.icon}}"></i>
     <p style="padding-left: 10px;">
@@ -16,4 +16,21 @@
     <i class="nav-icon {{sidebarItemData.icon}}"></i>
     <p style="padding-left: 10px;">{{sidebarItemData.name}}</p>
   </a>
+</li> -->
+
+<li>
+  <a href="javascript:void(0)" class="clearfix" (click)="sidebarItemData.clicked = !sidebarItemData.clicked;">
+    <i class="nav-icon {{sidebarItemData.icon}}"></i>
+    <p style="padding-left: 10px;">
+      {{sidebarItemData.name}}
+      <ng-container *ngIf="sidebarItemData.subitems !== null">
+        <i *ngIf="!sidebarItemData.clicked" class="right fa fa-angle-left"></i>
+        <i *ngIf="sidebarItemData.clicked" class="right fa fa-angle-down"></i>
+      </ng-container>
+
+    </p>
+  </a>
+  <ul *ngFor="let item of sidebarItemData.subitems" [ngClass]="{'active': sidebarItemData.clicked}">
+    <app-sidebar-item [sidebarItemData]="item"></app-sidebar-item>
+  </ul>
 </li>
